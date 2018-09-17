@@ -14,7 +14,7 @@ namespace RoleIdentity.Controllers
         {
            ApplicationDbContext context = new ApplicationDbContext();
             ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
-                                            .ToList(), "Name", "Name");
+                                            .ToList(), "Name", "Name"); 
             return View();
         }
 
